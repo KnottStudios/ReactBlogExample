@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.Leftfoot{
+  float: left;
+  margin-left: 1em;
+}
+.Rightfoot{
+  float: right;
+  margin-right: 1em;
+}
+.Button {
+  margin: .2em;
+  color: purple;
+  border-radius: 1em;
+  box-shadow: .1em .1em .2em;
+}
+.Clear{
+  display: block;
+  clear: both;
+}
+.Post{
+  float: left;
+  width: 25%;
+  min-width: 230px;
+  max-width: 280px;
+  margin: .5em;
+  padding: .5em;
+  border: solid;
+  border-radius: 1.2em;
+  border-color: blue;
+  height: 250px;
+  overflow: hidden;
+}
+
+.PostHeader{
+  height: 30px;  
+  padding-bottom: 10px;
+}
+.PostBody{
+  height: 150px;
+  text-align: left;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.HeaderTextBox{
+  Width: 95%;
+}
+.PostDetail{
+  width: 80%;
+  min-width: 230px;
+  margin: .5em;
+  padding: .5em;
+  position: fixed;
+  z-index: 1;
+  padding: 5%;
+  left: 3%;
+  top: 20%;
+  border: solid;
+  border-radius: 1.2em;
+  border-color: blue;
+  overflow: hidden;
+  background-color:white;
+}
+.PostDetailBody{
+  min-height: 150px;
+  overflow: scroll;
+  text-align: left;
+  overflow-x: hidden;
+}
+.BodyTextArea{
+  Width: 99%;
+  Height: 130px;
+}
+.Spacer {
+  Height: .6em;
+  padding: .5em;
+}
+.Foot{
+  background-color: black;
+  color: pink;
+  Position: fixed;
+  bottom: 0;
+  width: 99%;
+  height: .6em;
+  padding: .5em;
+}
+.Copyright{
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

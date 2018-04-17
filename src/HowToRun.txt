@@ -1,0 +1,26 @@
+HOW TO SET UP AN APP!
+{
+0.
+	https://reactjs.org/tutorial/tutorial.html
+1.
+	install most recent version of Node.js
+2.
+	npm install -g create-react-app
+	create-react-app my-app
+	cd my-app
+	npm start
+3.
+	Delete all files in the src/ folder of the new project (don’t delete the folder, just its contents).
+	cd my-app
+	rm -f src/*
+4.
+	Add a file named index.css in the src/ folder.
+5.
+	Add a file named index.js in the src/ folder.
+6.
+	Add these three lines to the top of index.js in the src/ folder:
+}
+
+
+HOW TO RUN AN APP!
+Now in command line, run npm start in the project folder and open http://localhost:3000 in the browser.
