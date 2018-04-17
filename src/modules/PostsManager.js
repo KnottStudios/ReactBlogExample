@@ -7,14 +7,21 @@ import { PostsItemEditor } from './PostsItemEditor';
 export class PostsManager extends React.Component{
     constructor(props){
         super(props);
-        this.state = { posts: null, filterText: '', selectedPost: '', isLoaded: false};
+        this.state = { openEditor: false, posts: null, filterText: '', selectedPost: '', isLoaded: false};
         this.setProperties = this.setProperties.bind(this);
         this.selectPost = this.selectPost.bind(this);
         this.updatePost = this.updatePost.bind(this);
+        this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     };
+    handleFilterTextChange(filterText) {
+        this.setState({
+          openEditor: false,
+          filterText: filterText
+        });
+      }
 
     selectPost(post){
-        this.setState({ selectedPost: post });
+        this.setState({ selectedPost: post, openEditor: true });
         console.log("post " + post);
     }
     setProperties(jObject){
@@ -40,9 +47,10 @@ export class PostsManager extends React.Component{
             <div>
                 {getAllPosts}
                 <h1>All Posts</h1>
-                <PostsItemEditor post={this.state.selectedPost} updatePost={this.updatePost}/>
+                <PostsItemEditor openEditor={this.state.openEditor} post={this.state.selectedPost} updatePost={this.updatePost}/>
                 <div>
-                <SearchBar filterText={this.state.filterText}/>
+                <SearchBar filterText={this.state.filterText} onFilterTextChange={this.handleFilterTextChange}/>
+                <p>Searching for: {this.state.filterText}</p>
                 <Posts posts={this.state.posts} filterText={this.state.filterText} selectPost={this.selectPost}/>
                 </div>
                 

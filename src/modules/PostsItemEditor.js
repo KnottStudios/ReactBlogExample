@@ -10,7 +10,10 @@ export class PostsItemEditor extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
     componentWillReceiveProps(nextProps){
-        if(!this.state.post){
+        if(!nextProps.openEditor){
+            this.setState({open: false});
+        }
+        else if(!this.state.post){
             this.setState({post : nextProps.post, open: true}) 
         }
         else if (nextProps.post.id !== this.state.post.id || this.state.open === false){

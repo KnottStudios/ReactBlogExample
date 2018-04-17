@@ -27,12 +27,20 @@ export class Posts extends React.Component {
             var user = userIds[userKey]
             rows.push(<PostsHeader userId={user} key= {masterKey}  />)
             masterKey += 1;
+            var headerKey = masterKey;
             for(key in posts){
                 post = posts[key];
+                if(post.title.indexOf(this.props.filterText) === -1  && post.body.indexOf(this.props.filterText) === -1){
+                    continue;
+                }
+
                 if(post.userId === user){
                     rows.push(<PostsItem post={post} key={masterKey} selectPost={this.selectPost}/>)
                     masterKey += 1;
                 }
+            }
+            if(headerKey == masterKey){
+                rows.pop();
             }
         }
         
