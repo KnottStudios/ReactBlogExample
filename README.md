@@ -1,5 +1,43 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+--------------------------------------------------------------------------------------------------------------------
+This app uses Node.js with a fetch component to go get "posts" from https://jsonplaceholder.typicode.com/.
+
+It then demonstrates the ability to create a mobile friendly "table" of posts that can be edited and selected.  This example will include a tutorial on my Linked-In account at some point, but for now, it is a simple example of what can be done with React by a person who has just learned React.  
+
+
+I initially created this app following these instructions:
+
+HOW TO SET UP AN APP!
+{
+0.
+	https://reactjs.org/tutorial/tutorial.html
+1.
+	install most recent version of Node.js
+2.
+	npm install -g create-react-app
+	create-react-app my-app
+	cd my-app
+	npm start
+3.
+	Delete all files in the src/ folder of the new project (don’t delete the folder, just its contents).
+	cd my-app
+	rm -f src/*
+4.
+	Add a file named index.css in the src/ folder.
+5.
+	Add a file named index.js in the src/ folder.
+6.
+	Add these three lines to the top of index.js in the src/ folder:
+}
+
+HOW TO RUN AN APP!
+Now in command line, run npm start in the project folder and open http://localhost:3000 in the browser.
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
