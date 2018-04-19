@@ -16,7 +16,7 @@ export class Footer extends React.Component {
         return (
             <footer className="Clear Foot">
                 <div className="Leftfoot">
-                    <a className="Copyright" href='#'>&copy;{copyright}</a>
+                    <a className="Copyright" href='#root'>&copy;{copyright}</a>
                 </div>
                 <div className="Rightfoot">
                     <span>by: Patrick Knott</span>

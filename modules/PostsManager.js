@@ -1,6 +1,6 @@
 import React from 'react';
 import { GetObjectFromUrl } from './GetObjectFromUrl';
-import { SearchBar } from './SearchBar';
+import { SearchBar2 } from './SearchBar2';
 import { Posts } from './Posts';
 import { PostsItemEditor } from './PostsItemEditor';
 
@@ -46,7 +46,7 @@ export class PostsManager extends React.Component{
         return(
             <div className="box">
                 {getAllPosts}
-                <SearchBar filterText={this.state.filterText} onFilterTextChange={this.handleFilterTextChange}/>
+                <SearchBar2 filterText={this.state.filterText} onFilterTextChange={this.handleFilterTextChange}/>
                 <h1 className="title">All Posts By UserId</h1>
                 <PostsItemEditor openEditor={this.state.openEditor} post={this.state.selectedPost} updatePost={this.updatePost}/>
                 <div>

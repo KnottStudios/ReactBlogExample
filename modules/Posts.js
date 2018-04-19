@@ -1,6 +1,7 @@
 import React from 'react';
 import { PostsItem } from './PostsItem';
 import { PostsHeader } from './PostsHeader';
+import { PostsTabs } from './PostsTabs';
 
 export class Posts extends React.Component {
     constructor(props){
@@ -27,7 +28,7 @@ export class Posts extends React.Component {
 
     render(){
         const panels = [];
-        const tabs = [];
+        const users = [];
         let userIds = [];
         const posts = this.props.posts;
         for(var key in posts){
@@ -59,20 +60,15 @@ export class Posts extends React.Component {
             if(headerKey === masterKey){
                 masterKey -= 1;
             } else {
-                const uId = user;
-                const linkId = "li" + user;
-                tabs.push(<li id={linkId} className="linkTab" onClick={()=>this.handleSelectTab({uId})} key={user}><a>ID {user}</a></li>);
+                const uId = "post" + user;
+                users.push(user);
                 panels.push(<div id={uId} className="tabContent is-hidden" key={user}>{headRow}<div className="box">{subrows}</div></div>)
             }
         }
         
         return(
             <div>
-                <div className="tabs">
-                <ul>
-                {tabs}
-                </ul>
-                </div>
+                <PostsTabs tabs={users} />
                 {panels}
             </div>
         );
