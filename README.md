@@ -28,7 +28,10 @@ HOW TO SET UP AN APP!
 5.
 	Add a file named index.js in the src/ folder.
 6.
-	Add these three lines to the top of index.js in the src/ folder:
+	Ensure these three lines are at the top of index.js in the src/ folder:
+	import React from 'react';
+	import ReactDOM from 'react-dom';
+	import './index.css';
 }
 
 HOW TO RUN AN APP!
